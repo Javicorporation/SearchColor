@@ -74,7 +74,8 @@
 
                 <Button x:Name="btnRandom"
                         BackgroundColor="{StaticResource Primary}"
-                        Text="Generate Random Color">
+                        Text="Generate Random Color"
+                        Clicked="btnRandom_Clicker">
                 </Button>
 
             </VerticalStackLayout>

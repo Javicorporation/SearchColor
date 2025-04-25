@@ -30,8 +30,17 @@ namespace SearchColor
             lblHex.Text = color.ToHex();
         }
 
-        private void slrGreen_ValueChanged(object sender, ValueChangedEventArgs e)
-        {
+        public void btnRandom_Clicker(object sender, EventArgs e) { 
+            var random = new Random();
+            var color = Color.FromRgb(
+                random.Next(0, 256),
+                random.Next(0, 256),
+                random.Next(0,256)
+                );
+            setColor(color);
+            slrRed.Value = color.Red;
+            slrGreen.Value = color.Green;
+            slrBlue.Value = color.Blue;
 
         }
     }
