@@ -29,22 +29,32 @@
                         MaximumTrackColor="{StaticResource Tertiary}"
                         MinimumTrackColor="{StaticResource Secondary}"
                         ThumbColor="{StaticResource Primary}"
+                        
+                        ValueChanged="Slider_ValueChanged"       
                         ></Slider>
+                
 
                 <Label Text="Color rojo"></Label>
                 <Slider x:Name="slrGreen"
                         MaximumTrackColor="{StaticResource Tertiary}"
                         MinimumTrackColor="{StaticResource Secondary}"
                         ThumbColor="{StaticResource Primary}"
+                        
+                        ValueChanged="Slider_ValueChanged"
                         ></Slider>
+                
 
                 <Label Text="Color rojo"></Label>
                 <Slider x:Name="slrBlue"
                         MaximumTrackColor="{StaticResource Tertiary}"
                         MinimumTrackColor="{StaticResource Secondary}"
                         ThumbColor="{StaticResource Primary}"
+                        
+                        ValueChanged="Slider_ValueChanged"
                         ></Slider>
-                <Frame CornerRadius="25" HorizontalOptions="Center">
+                
+                
+                <Frame CornerRadius="25" HorizontalOptions="Center" BackgroundColor="Aqua">
                     <HorizontalStackLayout>
                         <Label
                             x:Name="lblHex"
@@ -61,6 +71,11 @@
                             ></ImageButton>
                     </HorizontalStackLayout>
                 </Frame>
+
+                <Button x:Name="btnRandom"
+                        BackgroundColor="{StaticResource Primary}"
+                        Text="Generate Random Color">
+                </Button>
 
             </VerticalStackLayout>
         </Frame>

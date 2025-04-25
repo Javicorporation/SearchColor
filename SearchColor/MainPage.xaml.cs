@@ -10,5 +10,29 @@ namespace SearchColor
             InitializeComponent();
             // eliminamos el codigo por defecto
         }
+
+
+        // manejador de eventos
+        private void Slider_ValueChanged(Object sender, ValueChangedEventArgs e) {
+            var red = slrRed.Value;
+            var green = slrGreen.Value;
+            var blue = slrBlue.Value;
+
+            Color color = Color.FromRgb(red, green, blue);
+
+            setColor(color);
+        }
+
+        private void setColor(Color color)
+        {
+            btnRandom.BackgroundColor = color;
+            Container.BackgroundColor = color;
+            lblHex.Text = color.ToHex();
+        }
+
+        private void slrGreen_ValueChanged(object sender, ValueChangedEventArgs e)
+        {
+
+        }
     }
 }
