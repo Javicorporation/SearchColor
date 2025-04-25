@@ -4,6 +4,7 @@ namespace SearchColor
     public partial class MainPage : ContentPage
     {
         int count = 0;
+        bool isRandom = false;
 
         public MainPage()
         {
@@ -14,13 +15,18 @@ namespace SearchColor
 
         // manejador de eventos
         private void Slider_ValueChanged(Object sender, ValueChangedEventArgs e) {
-            var red = slrRed.Value;
-            var green = slrGreen.Value;
-            var blue = slrBlue.Value;
 
-            Color color = Color.FromRgb(red, green, blue);
+            if (!isRandom) {
+                var red = slrRed.Value;
+                var green = slrGreen.Value;
+                var blue = slrBlue.Value;
 
-            setColor(color);
+                Color color = Color.FromRgb(red, green, blue);
+
+                setColor(color); 
+            }
+
+            
         }
 
         private void setColor(Color color)
@@ -31,16 +37,20 @@ namespace SearchColor
         }
 
         public void btnRandom_Clicker(object sender, EventArgs e) { 
+            isRandom =true;
+
             var random = new Random();
             var color = Color.FromRgb(
                 random.Next(0, 256),
                 random.Next(0, 256),
                 random.Next(0,256)
                 );
+
             setColor(color);
             slrRed.Value = color.Red;
             slrGreen.Value = color.Green;
             slrBlue.Value = color.Blue;
+            isRandom = false;
 
         }
     }
