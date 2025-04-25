@@ -5,14 +5,65 @@
 
     <!-- seccion de resources para definir un conjunto de colores-->
     <ContentPage.Resources>
-        <!-- definimos llaves a cada elemento-->
         <Color x:Key="Primary">#ab3527</Color>
         <Color x:Key="Secondary">#775752</Color>
         <Color x:Key="Tertiary">#705c2e</Color>
     </ContentPage.Resources>
 
+
     <!-- definimos un nombre a el elemento grid-->
-        <Grid x:Name="Container" BackgroundColor="Black">
+    <Grid x:Name="Container" BackgroundColor="White">
+
+        <Frame Margin="10,0,10,0" VerticalOptions="Center" BackgroundColor="Pink">
+            <VerticalStackLayout Spacing="15" VerticalOptions="Center">
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    Text="Color Maker"
+                    ></Label>
+                
+                
+                <Label Text="Color Rojo:"/>
+                <Slider x:Name="slrRed"
+                        MaximumTrackColor="{StaticResource Tertiary}"
+                        MinimumTrackColor="{StaticResource Secondary}"
+                        ThumbColor="{StaticResource Primary}"
+                        ></Slider>
+
+                <Label Text="Color rojo"></Label>
+                <Slider x:Name="slrGreen"
+                        MaximumTrackColor="{StaticResource Tertiary}"
+                        MinimumTrackColor="{StaticResource Secondary}"
+                        ThumbColor="{StaticResource Primary}"
+                        ></Slider>
+
+                <Label Text="Color rojo"></Label>
+                <Slider x:Name="slrBlue"
+                        MaximumTrackColor="{StaticResource Tertiary}"
+                        MinimumTrackColor="{StaticResource Secondary}"
+                        ThumbColor="{StaticResource Primary}"
+                        ></Slider>
+                <Frame CornerRadius="25" HorizontalOptions="Center">
+                    <HorizontalStackLayout>
+                        <Label
+                            x:Name="lblHex"
+                            HorizontalTextAlignment="End"
+                            Text="HEX Value: #000000"
+                            VerticalOptions="Center">
+                        </Label>
+                        <ImageButton
+                            Margin="10,0,0,0"
+                            HeightRequest="25"
+                            Source="copy.png"
+                            VerticalOptions="Center"
+                            WidthRequest="25"
+                            ></ImageButton>
+                    </HorizontalStackLayout>
+                </Frame>
+
+            </VerticalStackLayout>
+        </Frame>
         
     </Grid>
 

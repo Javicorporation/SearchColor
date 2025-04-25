@@ -1,4 +1,5 @@
-﻿namespace SearchColor
+﻿
+namespace SearchColor
 {
     public partial class MainPage : ContentPage
     {
@@ -7,10 +8,7 @@
         public MainPage()
         {
             InitializeComponent();
-
             // eliminamos el codigo por defecto
         }
-
     }
-
 }
